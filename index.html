@@ -1,0 +1,343 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- 1px CSS is 1px screen -->
+        <title>Thomas' PortFolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+        <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar">
+            <img class="open-button-image" height="320" width="281" src="general/open.png" alt="menu image">
+        </button>
+
+        <nav id="navbar">
+            <ul>
+                <li><button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <img class="close-button-image" height="197" width="192" src="general/close.png" alt="close image">
+                </button></li>
+                <li class="home-li">
+                    <a class="active-link" href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+                <li>
+                    <a href="#skill">Skill</a>
+                </li>
+                <li>
+                    <a href="#project">Project</a>
+                </li>
+                <li>
+                    <a href="#hobby">Hobby</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+        <main>
+            <header id="home">
+                <div class="header-text">
+                    <h1><b>Thomas SOLER</b></h1>
+                    <h2>19 years old Programming Student</h2>
+                </div>
+                
+                <video class="menu-video" width="3840" height="2160" aria-label="menu's video" autoplay loop>
+                    <source src="general/71122-537102350.mp4">
+                </video>
+            </header>
+
+            <section id="about" aria-label="about section"> <!-- details about me -->
+                <div class="about">
+                    <h2>ABOUT ME</h2>
+                    <div class="content">
+                        <img class="thomas-portrait" src="general/thomas_portrait.png">
+                        <ul>
+                            <li>
+                                2nd year computer science student at the french engineering school EPITA.
+                            </li>
+                            <li>
+                                Currently studying at Shibaura Institute of Technology for one semester.
+                            </li>
+                            <li>
+                                
+                            </li>
+                            <li class="link">
+                                <a href="https://www.github.com/Totooneleader" target="_blank">
+                                    <img src="general/github-mark-white.png"></a>
+                                <a href="https://www.linkedin.com/in/thomas-soler-a8041a29a" target="_blank">
+                                    <img src="general/InBug-White.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" aria-label="education section"> <!-- details my educational history -->
+                <h2>EDUCATION</h2>
+                <div class="education">
+                    <div class="left">
+                        <div class="content">
+                            <img src="general/Epita.png" alt="EPITA logo">
+                            <div>
+                                <h3>EPITA School of Engineering</h3>
+                                <p><i>2025 - 2028</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="content">
+                            <img src="general/abm00004261.png" alt="SIT logo">
+                            <div>
+                                <h3>Shibaura Institute of Technology</h3>
+                                <p><i>2025</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <div class="content">
+                            <img src="general/Epita.png" alt="EPITA logo">
+                            <div>
+                                <h3>EPITA Preparatory Class</h3>
+                                <p><i>2023 - 2024</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="content">
+                            <img src="general/cropped-logond50-1.png" alt="Etablissement Notre Dame logo">
+                            <div>
+                                <h3>Notre Dame</h3>
+                                <p><i>2007 - 2023</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" aria-label="experience section"> <!-- details the internships, jobs and voluntary work -->
+                <h2>EXPERIENCES</h2>
+                <div class="experience">
+                    <div class="list">
+                        <div class="item">
+                            <img src="general/atelier.png" alt="L'ATELIER logo">
+                            <div class="content">
+                                <h3><i>2024</i></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/emmaus_connect.png" alt="Emmaüs Connect logo">
+                            <div class="content">
+                                <h3><i>2024</i></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/sainte_anne.png" alt="Ecole Libre Sainte-Anne logo">
+                            <div class="content">
+                                <h3><i>2023</i></h3>
+                                <p>Magic shows for primary school classes</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/cropped-logond50-1.png" alt="Etablissement Notre Dame logo">
+                            <div class="content">
+                                <h3><i>2022</i></h3>
+                                <p>Entertainment and presentation of the school festival</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/librairie_kleber.jpg" alt="Librairie Kleber logo">
+                            <div class="content">
+                                <h3><i>2021</i></h3>
+                                <p>Animation during the public meeting with the author of the <i>Mini loup</i> series</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/vp.jpg" alt="Visible Patient logo">
+                            <div class="content">
+                                <h3><i>2021</i></h3>
+                                <p>Use of vr / ar / mr headsets for viewing 3D files</p>
+                                <p>Setting up a file modification protocol in Blender</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="general/cropped-logond50-1.png" alt="Etablissement Notre Dame logo">
+                            <div class="content">
+                                <h3><i>2021</i></h3>
+                                <p>Participate in the “Enquête au Collège” event for secondary school students to promote literature</p>
+                            </div>
+                            
+                        </div>
+                        <div class="item">
+                            <img src="general/method_in_the_madness.png" alt="Method in the Madness logo">
+                            <div class="content">
+                                <h3><i>2019</i></h3>
+                                <p>Discover how a software development company works</p>
+                                <p>Learn the basics of Unity 3D</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skill" aria-label="skill section"> <!-- details my skills (programming language, language...) -->
+                <h2>SKILLS</h2>
+                <div class="skill">
+                    <div class="part">
+                        <div class="content">
+                            <img src="general/C_Logo.png" alt="C Logo">
+                        </div>
+                        <div class="content">
+                            <img src="general/Logo_C_sharp.svg.png" alt="C# Logo">
+                        </div>
+                        <div class="content">
+                            <img src="general/OCaml_Logo.png" alt="OCaml Logo">
+                            <h3>OCaml</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/Python-logo-notext.svg.png" alt="Python Logo">
+                            <h3>Python</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/html5 logo.png" alt="HTML 5 Logo">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/CSS Cascading Style Sheets 2025.png" alt="CSS Logo">
+                        </div>
+                        <div class="content">
+                            <img src="general/JavaScript-logo.png" alt="JavaScript Logo">
+                        </div>
+                        <div class="content">
+                            <img src="general/LaTeX_logo.svg.png" alt="LaTeX Logo">
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="content">
+                            <img src="general/Flag_of_France_Flat_Round_Corner-2048x2048.png" alt="France Flag">
+                            <h3>Français</h3>
+                            <small>Native Speaker</small>
+                        </div>
+                        <div class="content">
+                            <img src="general/Flag_of_United_Kingdom_Flat_Round_Corner-2048x2048.png" alt="United Kingdom Flag">
+                            <h3>English</h3>
+                            <small>Full Professional<br>Capability</small>
+                        </div>
+                        <div class="content">
+                            <img src="general/Flag_of_Germany_Flat_Round_Corner-2048x2048.png" alt="Germany Flag">
+                            <h3>Deutch</h3>
+                            <small>Limited Professional<br>Competence</small>
+                        </div>
+                        <div class="content">
+                            <img src="general/Flag_of_Japan_Flat_Round_Corner-2048x2048.png" alt="Japan Flag">
+                            <h3>日本語</h3>
+                            <small>Basic Knowledge</small>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="content">
+                            <img src="general/unity logo.png" alt="Unity Logo">
+                            <h3>Unity</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/Microsoft Office.png" alt="Office Logo">
+                            <h3>Microsoft Office</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/Linux.png" alt="Linux Logo">
+                            <h3>Linux</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/Windows 11.png" alt="Windows 11 Logo">
+                            <h3>Windows</h3>
+                        </div>
+                        <div class="content">
+                            <img src="general/Git.png" alt="Git Logo">
+                            <h3>Git</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project" aria-label="project section"> <!-- link to the project page -->
+                <div class="sticky">
+                    <div class="scroll_section">
+                        <h2>PROJECTS</h2>
+                        <div class="content">
+                            <h3>Power ON</h3>
+                            <p>Power ON is the first game of ShinyDuck Studio, where you are a citizen who play everyday an arcade machine but something seems wrong about it and you need to find what.</p>
+                            <img src="general/projects/poweron.png" alt="Power ON">
+                            <a href="https://www.youtube.com/watch?v=k1VnNymqjIM" target="_blank">
+                                <img src="general/powedron logo.png" alt="Power ON logo">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>Experiment #431</h3>
+                            <p>First official release of ShinyDuck Studio developed during the Emotional Game Jam 2022, Experiment #431 is a puzzle game which take place in a laboratory that hides some secrets...</p>
+                            <img src="general/projects/experiment431.png" alt="Experiment #431">
+                            <a href="https://itch.io/jam/emotional-game-jam/rate/1393850" target="_blank">
+                                <img src="general/itchio-logo-textless-white.png" alt="itchio logo">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>Epi'Cure</h3>
+                            <p>Improving patients' nutritional status is a crucial challenge for their overall health and well-being. The EPI'CURE application aims to meet this challenge by offering an innovative approach to nutrition, centered on the individual needs and dietary preferences of each user.</p>
+                            <img src="general/projects/epicure.png" alt="Epi'Cure App">
+                            <a href="https://hackinghealth.media/epicure-revolutionner-la-nutrition-des-patients-a-lhopital-f7da81b9-eaf8-4744-9757-d07ff8159938" target="_blank">
+                                <img src="general/Logo_epicure.png" alt="Epi'Cure Logo">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>New Dog Old Tricks</h3>
+                            <p>A game from ShinyDuck Studio, New Dog, Old Tricks mixes mysteries, adventures, and puzzles to offer players a gaming experience in the style of retro games. It is a cooperative multiplayer game.</p>
+                            <img src="general/projects/ndot.png" alt="NDOT">
+                            <a href="https://shinyduckstudio.fr/ndot_en/" target="_blank">
+                                <img src="general/icone_redesign_lighter.png" alt="NDOT Logo">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>OCR-Word-Search-Solver</h3>
+                            <p>A project made by ShinyDuck's Wings, this program allow you to solve a word search game.</p>
+                            <img src="general/projects/ocr.png" alt="OCR Word-Search-Solver">
+                            <a href="https://dodieisshining.github.io/ShinyDuckWingsWebsite/index.html" target="_blank">
+                                <img src="general/sdwlogo.png" alt="ShinyDuckWings Logo">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>Copy Paste</h3>
+                            <p>My second Game Jam organized with some friends, we had one day to create a game with the theme "Copy and Paste".<br>Copy Paste is a Rogue Like where you explore a spaceship fighting monsters and each time you kill one of them you obtain his skill.</p>
+                            <img src="general/projects/copypaste2.png" alt="Copy Paste">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hobby" aria-label="hobby section"> <!-- link to the music and magic page -->
+            </section>
+
+            <section id="contact" aria-label="contact section"> <!-- details my contact information -->
+            </section>
+
+            <footer>
+            </footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,727 @@
+:root
+{
+    --text-color: #c9c9c9;
+    --primary-color: #11121a;
+    --hover-color: #272832;
+    --accent-color-1: #8a43df;
+    --accent-color-2: #FFC300;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-image: url(general/Fond1.png);
+    background-size: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2
+{
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+/*NAVIGATION BAR*/
+
+nav
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+}
+nav ul
+{
+    list-style: none;
+    display: flex;
+}
+nav .home-li
+{
+    margin-right: auto;
+}
+nav li
+{
+    display: flex;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+nav a
+{
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1em 2em;
+    transition: background-color 500ms ease;
+    font-size: large;
+}
+nav a:hover
+{
+    background-color: var(--hover-color);
+}
+nav a.active-link
+{
+    border-bottom: 2px solid var(--accent-color-1);
+}
+#open-sidebar-button
+{
+    display: none;
+    position: fixed;
+    right: 1em;
+    z-index: 8;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 5em;
+}
+img.open-button-image
+{
+    max-width: 100%;
+    height: auto;
+}
+#close-sidebar-button
+{
+    display: none;
+    padding: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 20%;
+}
+nav ul li img.close-button-image
+{
+    max-width: 100%;
+    height: auto;
+}
+#overlay
+{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+/*HEADER*/
+
+main header
+{
+    position: relative;
+    padding-bottom: 2%;
+}
+
+main header video.menu-video
+{
+    max-width: 100%;
+    height: auto;
+}
+
+.header-text
+{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 100%;
+    text-align: right;
+    font-size: max(0.7rem, 2vw);
+    text-shadow: 3px 3px 6px var(--hover-color);
+}
+
+#skill, #contact {
+    scroll-margin-top: 50px;
+}
+
+/*ABOUT SECTION*/
+
+#about
+{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+}
+
+div.about
+{
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+div.about h2
+{
+    padding-top: 5%;
+}
+
+div.about div.content
+{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+div.about img.thomas-portrait
+{
+    width: 40%;
+    height: auto;
+}
+
+div.about ul
+{
+    text-align: left;
+    flex: 1;
+    list-style-type: none;
+}
+div.about ul li
+{
+    padding-bottom: 5%;
+}
+
+div.about ul li.link
+{
+    text-align: center;
+}
+
+div.about ul img
+{
+    width: 20%;
+    height: auto;
+    padding: 2%;
+    transition: 0.5s;
+}
+
+div.about ul li.link a:hover img
+{
+    transform: scale(1.2);
+}
+
+/*EDUCATION SECTION*/
+
+#education
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#education h2
+{
+    padding-top: 6%;
+}
+
+div.education
+{
+    position: relative;
+    margin: 0 auto;
+}
+
+div.education::after
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--hover-color);
+    border-radius: 6px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+div.left, div.right
+{
+    padding: 10px 50px;
+    position: relative;
+    background-color: inherit;
+    width: 50vw;
+}
+
+.left 
+{
+    left: -50%;
+}
+
+.right 
+{
+    left: 50%;
+}
+
+div.education .content   
+{
+    padding: 20px 30px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.education .content img
+{
+    width: 150px;
+    height: auto;
+    padding-right: 5%;
+}
+
+/*EXPERIENCE SECTION*/
+
+#experience
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#experience h2
+{
+    padding-top: 6%;
+}
+
+.experience
+{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.experience .list
+{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: transform .8s;
+}
+
+.experience .list .item
+{
+    width: calc(calc(100vw/6)*2);
+    color: #00000000;
+    text-align: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: transform 1s;
+    display: flex;
+    flex-direction: column;
+    filter: blur(10px);
+    cursor: default;
+    transition: .8s;
+}
+
+.experience .list .item.active
+{
+    width: calc(calc(100vw/6)*2);
+    transform: rotate(0deg);
+    filter: blur(0px); 
+    color: var(--text-color);
+}
+
+.experience .list .item img
+{
+    width: 40%;
+    filter: drop-shadow(0 0 20px #000);
+    transition: .8s;
+}
+.experience .list .item.active img
+{
+    width: 60%;
+}
+.experience .list .item.active:hover img,
+.experience .list .item.active img.active
+{
+    width: 65%;
+    opacity: 0.3;
+}
+
+.experience .list .item.active:hover .content,
+.experience .list .item.active .content.active
+{
+    opacity: 1;
+}
+
+.experience .list .item .content
+{
+    transition: .5s ease;
+    border-radius: 6px;
+    padding: 10px 10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #2728326f;
+    text-align: center;
+    z-index: 20;
+    backdrop-filter: blur(20px);
+}
+
+#prev, #next
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--hover-color);
+    color: var(--text-color);
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 15;
+}
+
+#prev
+{
+    left: 1%;
+}
+
+#next
+{
+    right: 1%;
+}
+
+/*SKILL SECTION*/
+
+#skill
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.skill .part
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+.skill .part .content
+{
+    width: flex-basis;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.skill .part .content img
+{
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 20px #000);
+    transition: .8s;
+    padding-bottom: 10px;
+}
+
+.skill .part .content img:hover
+{
+    transform: scale(1.1);
+}
+
+/*PROJECT SECTION*/
+
+#project
+{
+    background-color: var(--primary-color);
+    height: 500vh;
+}
+
+.sticky
+{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.scroll_section
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 500vw;
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+#project .content
+{
+    width: 400px;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    padding: 20px 20px;
+    background-color: #2728326f;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#project .content a img
+{
+    width: 100px;
+    transition: .8s;
+    padding-right: 0%;
+}
+
+#project .content a img:hover
+{
+    transform: scale(1.2);
+}
+
+#project .content img
+{
+    width: 100%;
+}
+
+/*Mobile Device*/
+
+@media screen and (max-width: 1060px)
+{
+    #open-sidebar-button, #close-sidebar-button
+    {
+        display: block;
+    }
+
+    nav
+    {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 20;
+        border-left: 1px solid var(--hover-color);
+        transition: right 700ms ease-out;
+        background-color: var(--primary-color);
+    }
+    nav.show
+    {
+        right: 0;
+    }
+    nav.show ~ #overlay
+    {
+        display: block;
+    }
+    nav ul
+    {
+        width: 100%;
+        flex-direction: column;
+    }
+    nav a
+    {
+        width: 100%;
+    }
+    nav .home-li
+    {
+        width: 100%;
+    }
+    .content img
+    {
+        width: 9vw;
+    }
+
+    /*EDUCATION*/
+
+    #education .content img
+    {
+        width: 50%;
+    }
+
+    /*PROJECT*/
+
+    #project
+    {
+        height: 600vh;
+    }
+    #project h2
+    {
+        padding-top: 6%;
+    }
+    .sticky
+    {
+        position: relative;
+        height: 100%;
+    }
+    .scroll_section
+    {
+        will-change: auto;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #project .content
+    {
+        height: 80vh;
+        width: 90%;
+    }
+    #project .content img
+    {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    div.content
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    div.about img.thomas-portrait
+    {
+        width: 50%;
+    }
+
+    div.about ul
+    {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #about
+    {
+        height: auto;
+    }
+
+    /*EDUCATION*/
+
+    div.education::after
+    {
+        left: 31px;
+    }
+
+    div.left, div.right
+    {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .right, .left
+    {
+        left: 0%;
+    }
+
+    #education .content img
+    {
+        width: 90px;
+    }
+
+    /*EXPERIENCE*/
+
+    #experience
+    {
+        height: 60vh;
+    }
+
+    .experience .list .item img
+    {
+        width: 60%;
+        filter: drop-shadow(0 0 20px #000);
+        transition: .8s;
+    }
+    .experience .list .item.active img
+    {
+        width: 90%;
+    }
+    .experience .list .item.active:hover img
+    {
+        width: 95%;
+    }
+    .experience .list .item .content
+    {
+        width: 130%;
+    }
+    #prev, #next
+    {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*SKILL*/
+
+    .skill .part .content img
+    {
+        width: 100px;
+    }
+
+    /*PROJECT*/
+
+    #project .content img
+    {
+        width: 100%;
+    }
+}
