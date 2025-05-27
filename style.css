@@ -543,6 +543,98 @@ div.education .content
     width: 100%;
 }
 
+/*CONTACT SECTION*/
+
+#contact
+{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #2728326f;
+    backdrop-filter: blur(20px);
+    padding: 20px 20px;
+    width: 60%;
+}
+
+#contact label
+{
+    width: 100%;
+    display: block;
+    margin-top: 24px;
+}
+
+#contact input
+{
+    border-radius: 320px;
+}
+
+#contact input, textarea
+{
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px var(--primary-color), inset -5px -5px 10px var(--hover-color);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+#contact input:focus, textarea:focus
+{
+    box-shadow: inset 1px 1px 2px var(--primary-color), inset -1px -1px 2px var(--hover-color);
+}
+
+#contact textarea
+{
+    resize: none;
+    border-radius: 10px;
+    height: 200px;
+}
+
+#contact button 
+{
+    margin-top: 24px;
+    color:#61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #363745,  5px 5px 20px var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 320px;
+}
+#contact button:hover 
+{
+    box-shadow: -2px -2px 5px #363745, 2px 2px 5px var(--primary-color);
+}
+#contacr button:active 
+{
+    box-shadow: inset 1px 1px 2px var(--primary-color), inset -1px -1px 2px #363745;
+}
+
+#contact button, input, textarea {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+/*FOOTER*/
+
+
+
 /*Mobile Device*/
 
 @media screen and (max-width: 1060px)
@@ -628,6 +720,18 @@ div.education .content
     #project .content img
     {
         width: 50%;
+    }
+
+    /*CONTACT*/
+
+    #contact form
+    {
+        width: 90%;
+    }
+
+    #contact textarea
+    {
+        height: 300px;
     }
 }
 
