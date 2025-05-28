@@ -139,7 +139,7 @@ main header video.menu-video
     text-shadow: 3px 3px 6px var(--hover-color);
 }
 
-#skill, #contact {
+#skill, #hobby, #contact {
     scroll-margin-top: 50px;
 }
 
@@ -545,6 +545,92 @@ div.education .content
     width: 100%;
 }
 
+/*HOBBY SECTION*/
+
+#hobby
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+#hobby .container
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+#hobby .container .content
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    height: 500px;
+    border-radius: 6px;
+    background-color: #2728326f;
+    backdrop-filter: blur(20px);
+    padding: 20px 20px;
+    margin-top: 2%;
+}
+
+#hobby .container .content p
+{
+    margin-top: 5%;
+}
+
+#hobby .container .content iframe
+{
+    border-radius:12px;
+    width: 100%;
+    height: 80px;
+    margin-top: 5%;
+    aspect-ratio: 3 / 1;
+}
+
+#hobby .container .content img 
+{
+    border-radius: 12px;
+    margin-top: 5%;
+    width: 100%;
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: .8s;
+}
+
+#hobby .container .content img:hover
+{
+    transform: scale(1.05);
+}
+
+#hobby .container .content a
+{
+    margin-top: 5%;
+}
+
+#hobby .container .content a img 
+{
+    margin-top: 0%;
+    width: 50px;
+    height: auto;
+    transition: .8s;
+}
+
+#hobby .container .content a img:hover 
+{
+  filter: brightness(1.2);
+  transform: scale(1.2);
+}
+
 /*CONTACT SECTION*/
 
 #contact
@@ -624,65 +710,74 @@ div.education .content
     box-shadow: inset 1px 1px 2px var(--primary-color), inset -1px -1px 2px #363745;
 }
 
-#contact button, input, textarea {
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  padding: 16px;
-  background-color: var(--hover-color);
-  color: var(--text-color);
+#contact button, input, textarea 
+{
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    padding: 16px;
+    background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
 /*FOOTER*/
 
-.site-footer {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 40px 20px 20px;
+.site-footer 
+{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 40px 20px 20px;
 }
 
-.site-footer a {
-  color: var(--text-color);
-  text-decoration: none;
-  transition: .8s;
+.site-footer a 
+{
+    color: var(--text-color);
+    text-decoration: none;
+    transition: .8s;
 }
 
-.site-footer a:hover {
-  color: #fff;
+.site-footer a:hover 
+{
+    color: #fff;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-brand h2 {
-  color: var(--text-color);
-  margin-bottom: 10px;
+.footer-brand h2 
+{
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
-.footer-social .social-icons a img {
-  width: 24px;
-  margin-right: 10px;
-  filter: brightness(0.7);
-  transition: .8s;
+.footer-social .social-icons a img 
+{
+    width: 24px;
+    margin-right: 10px;
+    filter: brightness(0.7);
+    transition: .8s;
 }
 
-.footer-social .social-icons a img:hover {
-  filter: brightness(1.2);
-  transform: scale(1.2);
+.footer-social .social-icons a img:hover 
+{
+    filter: brightness(1.2);
+    transform: scale(1.2);
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid #333;
-  padding-top: 15px;
-  font-size: 0.9em;
+.footer-bottom 
+{
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 0.9em;
 }
 
 /*Mobile Device*/
@@ -739,6 +834,13 @@ div.education .content
         width: 50%;
     }
 
+    /*EXPERIENCE*/
+
+    #experience
+    {
+        height: 60vh;
+    }
+
     /*PROJECT*/
 
     #project
@@ -769,7 +871,19 @@ div.education .content
     }
     #project .content img
     {
-        width: 50%;
+        width: 100%;
+    }
+
+    /*HOBBY*/
+
+    #hobby .container
+    {
+        flex-direction: column;
+    }
+
+    #hobby .container .content
+    {
+        width: 40%;
     }
 
     /*CONTACT*/
@@ -877,5 +991,12 @@ div.education .content
     #project .content img
     {
         width: 100%;
+    }
+
+    /*HOBBY*/
+
+    #hobby .container .content
+    {
+        width: 80%;
     }
 }
